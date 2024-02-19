@@ -160,7 +160,7 @@
             <!-- right -->
             <div class="right-best-offer flex my-14 bg-[#F78C9C]">
               <div class="offTwenty p-12 font-inter">
-                <h3 class="font-bold text-5xl">15% OFF</h3>
+                <h3 class="font-bold text-5xl">20% OFF</h3>
                 <p class="text-2xl font-bold">on your next purchase</p>
                 <p class="text-2xl">use by April 2024</p>
               </div>
@@ -323,8 +323,9 @@
             <!-- left side end-->
             <!-- right side start -->
             <div class="w-5/12 bg-white p-10">
-              <div class="">
-                <h2 class="">Select your seat</h2>
+              <h2 class="px-5 pb-8 border-b-2 border-dashed mb-7">Select your seat</h2>
+              <div class="bg-[#F7F8F8] p-5 rounded-3xl">
+                
                 <table class="w-full">
                   <thead>
                     <tr>
@@ -339,10 +340,13 @@
 
                 </table>
 
-                <p class="border-t-2 border-dashed p-4">Total Price: <span id="totalPrice">0</span></p>
-                <label for="couponCode">Coupon Code:</label>
-                <input type="text" id="couponCode">
-                <button onclick="applyCoupon()">Apply Coupon</button>
+                <p class="border-t-2 border-dashed p-4 flex justify-between px-10"><span>Total Price:</span> <span id="totalPrice">0</span>
+                </p>
+                <div class="bg-white flex justify-between p-2 rounded">
+                  <input type="text" id="couponCode" placeholder="Have any coupon" class="px-10">
+                  <button onclick="applyCoupon()" class="bg-green-500 px-5 py-2 rounded-xl">Apply </button>
+                </div>
+                
                 <p>Discounted Price: <span id="discountedPrice">0</span></p>
                 <p class="border-t-2 border-dashed p-4">Grand Total: <span id="grandTotal">0</span></p>
 
@@ -350,21 +354,80 @@
 
 
               </div>
+              <div class="my-5 ">
+                <button onclick="nextClick()"
+                class="w-full py-3 rounded-xl bg-[#1DD100] text-white hover:bg-white hover:border-2 font-bold hover:border-green-500 hover:text-green-500">
+                  Next
+
+                </button>
+              </div>
+              <div class="flex justify-around">
+                <p class="border-b-2">Terms and Conditions</p>
+                <p class="border-b-2">Cancellation Policy</p>
+              </div>
             </div>
             <!-- right side end -->
           </div>
           <!-- select your seat end -->
+
+          <!--  next area start -->
+          <div id="nextSuccess" class="hidden next-area text-center space-y-3 py-10">
+            <div class="flex justify-center">
+              <img src="./images/success.png" alt="">
+            </div>
+            <h3 class="text-3xl uppercase text-green-500">Success</h3>
+            <h3 class="text-2xl font-bold">Thank you for Booking Our Bus Seats. </h3>
+            <h3 class="text-2xl font-bold">We are working hard to find the best service and deals for you. </h3>
+            <h3 class="text-2xl">Shortly you will find a confirmation in your email.</h3>
+            <button class="bg-green-500 text-white py-3 px-6 rounded-2xl text-3xl mb-20">Continue</button>
+          </div>
+          <!--  next area end -->
         </div>
         <!-- container end-->
       </section>
       <!-- ph paribahan secrion end -->
+      <!-- next function -->
+      
     </main>
-    <footer class="bg-black text-white">This is footer</footer>
+    <footer class="bg-black text-[#686B71]">
+      <div class="container mx-auto">
+        <div class="flex justify-between p-10 border-b-2 border-dashed border-[#686B71] ">
+          <div class="space-y-3">
+            <h1 class="text-4xl font-bold">DigitalTicket</h1>
+            <p class="text-xl">DigitalTicket is a digital platform to make your </p>
+            <p class="text-xl">daily commuting better.</p>
+          </div>
+          <div class="">
+            <h3 class="text-2xl my-3">Download our app</h3>
+            <div class="flex gap-5">
+              <div class="p-2">
+                <img src="./images/playstore.png" alt="">
+              </div>
+              <div class="">
+                <p>Get it on</p>
+                <h3>Google play</h3>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="p-10 flex justify-between">
+          <p class="text-xl">@all rights reserved, P-Ticket services limited.2024</p>
+          <div class="text-xl text-white flex gap-8">
+            <p>Terms & condition</p>
+            <p>Return & refund policy</p>
+            <p>Privacy policy</p>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
 
     <!-- Script -->
     <!-- <script src="./js/available.js"></script> -->
     <script src="./js/seatavailable.js"></script>
     <script src="./js/addclick.js"></script>
+    <script src="./js//nextfun.js"></script>
     <!-- <script src="./js/seat.js"></script> -->
 </body>
 </html>
