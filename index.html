@@ -15,6 +15,18 @@
     <!-- tailwind and daisy ui inter 700,600, 500, 400 -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              selected: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+
     <style>
       .font-raleway{
         font-family: "Raleway", sans-serif;
@@ -27,6 +39,7 @@
 <body class="bg-white">
     <!-- header start -->
     <header>
+      <div class="container mx-auto">
         <!-- navbar start -->
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -35,16 +48,10 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Item 1</a></li>
-                  <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a>Item 3</a></li>
-                  <li><a>Item 3</a></li>
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
                 </ul>
               </div>
               <a class="btn btn-ghost text-xl">DigitalTicket</a>
@@ -58,26 +65,32 @@
               </ul>
             </div>
             <div class="navbar-end">
-              <a class="btn">Button<i class="fa-solid fa-car-side"></i></a>
+              <a class="btn bg-green-200 text-green-600">Bus<i class="fa-solid fa-car-side"></i></a>
             </div>
         </div>
         <!-- navbar end -->
+      </div> <!-- container div -->
     </header>
     <!-- header end -->
     <main>
 
       <!-- main banner start -->
       <section>
-        <div class="hero min-h-screen" style="background-image: url(./images/banner.png);">
-          <div class="hero-overlay bg-opacity-60"></div>
-          <div class="hero-content text-center text-neutral-content">
-            <div class="max-w-md">
-              <h1 class="mb-5 font-raleway text-5xl font-bold">Hello there</h1>
-              <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-              <button class="btn btn-primary">Get Started</button>
+        <div class="container mx-auto">
+          <div class="hero min-h-screen" style="background-image: url(./images/banner.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="">
+                <h1 class="mb-5 font-raleway text-6xl font-bold ">End-to-End Travel with </h1>
+                <h1 class="mb-5 font-raleway text-6xl font-bold">Digital Paribahan</h1>
+                <p class="max-w-xl mx-auto mb-5"> We are offering excelent places with flexible budget. You will get awesome experience with us. So, why so late? hurry up. Buy your desire destination ticket.</p>
+                <button class="btn btn-primary bg-green-500 text-black border-0">Buy Tickets</button>
+              </div>
             </div>
           </div>
-        </div>
+        </div> <!-- container div -->
+
+        
       </section>
       <!-- main banner end -->
       <!-- best offer start -->
@@ -113,7 +126,7 @@
                   </div>
                 </div>
                 <div class="">
-                  <button class="bg-green-200 text-green-500 border-5 border-green-700 py-2 px-4 rounded-xl">8 Seats left</button>
+                  <button class="bg-green-200 text-green-500 border-5 border-green-700 py-2 px-4 rounded-xl"> <span id="available-seat">8</span> Seats left</button>
                 </div>
                 
               </div>
@@ -158,7 +171,7 @@
           <!-- select your seat start -->
           <div class="flex">
             <!-- left side start-->
-            <div class="w-8/12 bg-white p-10 border-r-2 border-dashed">
+            <div class="w-7/12 bg-white p-10 border-r-2 border-dashed">
               <!-- seat desc -->
               <div class="">
                 <h2 class="capitalize py-3 border-b-2 border-dashed">Select your seat</h2>
@@ -178,16 +191,57 @@
                 </div>
               </div>
               <!-- seat desc end -->
-              <!-- Seat -->
-              <div class="">
-                <div class=""></div>
-                <div class=""></div>
+              <!-- Seat container-->
+              <div class="px-5">
+                <div class="flex justify-end">
+                  <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl my-5">
+                    <i class="fa-solid fa-dharmachakra"></i>
+                  </p>
+                  
+                </div>
+
+                <!-- seat arae start -->
+                <div class="">
+                  <div class="space-y-5">
+                    <!-- 1st row start -->
+                    <div class=" flex justify-between">
+                      <div class="seat-left flex gap-6">
+                        <p class="p-2">A</p>
+                    
+                        <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl seat-place" data-class="Economy" data-price="550">A1</p>
+                        <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl seat-place" data-class="Economy" data-price="550">A2</p>
+
+                      </div>
+                      <div class="seat-right flex gap-6">
+                        <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl seat-place" data-class="Economy" data-price="550">A3</p>
+                        <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl seat-place" data-class="Economy" data-price="550">A4</p>
+                      </div>
+                    </div>
+                    <!-- 1st row end -->
+                    <!-- 2nd row start -->
+                    <div class=" flex justify-between">
+                      <div class="seat-left flex gap-6">
+                        <p class="p-2">A</p>
+                    
+                        <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl seat-place" data-class="Economy" data-price="550">B1</p>
+                        <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl seat-place" data-class="Economy" data-price="550">B2</p>
+
+                      </div>
+                      <div class="seat-right flex gap-6">
+                        <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl seat-place" data-class="Economy" data-price="550">B3</p>
+                        <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl seat-place" data-class="Economy" data-price="550">B4</p>
+                      </div>
+                    </div>
+                    <!-- 2nd row end -->
+                  </div>
+                </div>
+                <!-- seat area end -->
               </div>
               <!-- Seat end-->
             </div>
             <!-- left side end-->
             <!-- right side start -->
-            <div class="w-4/12 bg-white p-10">
+            <div class="w-5/12 bg-white p-10">
               <div class="">
                 <h2 class="">Select your seat</h2>
                 <table class="w-full">
@@ -198,21 +252,22 @@
                       <th class="">Price</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr class="text-center">
-                      <td>C2</td>
-                      <td>Economy</td>
-                      <td>550</td>
-                    </tr>
-                    <tr class="text-center">
-                      <td>C2</td>
-                      <td>Economy</td>
-                      <td>550</td>
-                    </tr>
+                  <tbody id="selectedSeatsBody" class="tbodyclass">
+
                   </tbody>
-                              
-                  
+
                 </table>
+
+                <p class="border-t-2 border-dashed p-4">Total Price: <span id="totalPrice">0</span></p>
+                <label for="couponCode">Coupon Code:</label>
+                <input type="text" id="couponCode">
+                <button onclick="applyCoupon()">Apply Coupon</button>
+                <p>Discounted Price: <span id="discountedPrice">0</span></p>
+                <p class="border-t-2 border-dashed p-4">Grand Total: <span id="grandTotal">0</span></p>
+
+
+
+
               </div>
             </div>
             <!-- right side end -->
@@ -224,5 +279,11 @@
       <!-- ph paribahan secrion end -->
     </main>
     <footer class="bg-black text-white">This is footer</footer>
+
+    <!-- Script -->
+    <!-- <script src="./js/available.js"></script> -->
+    <script src="./js/seatavailable.js"></script>
+    <script src="./js/addclick.js"></script>
+    <!-- <script src="./js/seat.js"></script> -->
 </body>
 </html>
