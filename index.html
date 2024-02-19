@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Ticket</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@500&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- fontawesome         railway 800,700, 600, 500  -->
+    <script src="https://kit.fontawesome.com/02bea20449.js" crossorigin="anonymous"></script>
+    <!-- tailwind and daisy ui inter 700,600, 500, 400 -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .font-raleway{
+        font-family: "Raleway", sans-serif;
+      }
+      .font-inter{
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- header start -->
+    <header>
+        <!-- navbar start -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Item 1</a></li>
+                  <li>
+                    <a>Parent</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Item 3</a></li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-xl">DigitalTicket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn">Button<i class="fa-solid fa-car-side"></i></a>
+            </div>
+        </div>
+        <!-- navbar end -->
+    </header>
+    <!-- header end -->
+    <main>
+
+      <!-- main banner start -->
+      <section>
+        <div class="hero min-h-screen" style="background-image: url(./images/banner.png);">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 font-raleway text-5xl font-bold">Hello there</h1>
+              <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+              <button class="btn btn-primary">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- main banner end -->
+      <!-- best offer start -->
+      <section>
+        <h1>Best offers for you</h1>
+        <div class="left-best-offer"></div>
+        <div class="right-best-offer"></div>
+        <button>see all offers</button>
+      </section>
+      <!-- best offer end -->
+      <!-- ph paribahan start -->
+      <section class="phparibahan bg-[#F7F8F8] border-t-2 border-green-500 rounded-t-3xl">
+        <!-- container start-->
+        <div class="container mx-auto">
+          <!-- title and desc area start -->
+          <div class="phparibahan-desc text-center py-10">
+            <h1 class="text-4xl font-raleway font-bold">P.H Paribahan</h1>
+            <p class="text-lg font-inter font-normal">You can choose your ticket from us for your dream destination. We are offering flexible journey with awesome experience.</p>
+          </div>
+          <!-- title and desc area end --> 
+          <!-- greenline-paribahan start --> 
+          <div class="flex">
+            <!-- left start -->
+            <div class="left-greenline-paribahan bg-white w-10/12 p-10 rounded-tr-3xl mb-20">
+              <div class="flex">
+                <div class="flex-1 flex gap-4 pb-6">
+                  <div class="p-2">
+                    <img src="./images/bus-logo.png" alt="">
+                  </div>                 
+                  <div class="">
+                    <h2 class="text-4xl capitalize font-bold font-raleway"> greenline paribahan</h2>
+                    <p class="text-[#83858A] text-lg">Coach-009-WEB ! AC_Business</p>
+                  </div>
+                </div>
+                <div class="">
+                  <button class="bg-green-200 text-green-500 border-5 border-green-700 py-2 px-4 rounded-xl">8 Seats left</button>
+                </div>
+                
+              </div>
+              <!-- table -->
+              <div class="greenline-paribahan-table bg-[#F7F8F8] p-8 rounded-3xl">
+                <div class="flex justify-between py-3 border-b-2 border-dashed">
+                  <h3 class="text-2xl">Route</h3>
+                  <h3 class="text-2xl">Dhaka-Sylhet</h3>
+                </div>
+                <div class="flex justify-between py-3 border-b-2 border-dashed">
+                  <h3 class="text-2xl">Departure Time</h3>
+                  <h3 class="text-2xl">9.00 PM</h3>
+                </div>
+                <div class="flex justify-between pt-5">
+                  <div class="w-60 bg-[#EAEBEC] text-center py-3 rounded-2xl">
+                    <p class="text-[#3A3E46] font-inter font-normal">Boarding Point - Laxmipur</p>
+                  </div>
+                  <div class="w-60 bg-[#EAEBEC] text-center py-3 rounded-2xl">
+                    <p class="text-[#3A3E46] font-inter font-normal">Dropping Point - Bogura</p>
+                  </div>
+                  <div class="w-60 bg-[#EAEBEC] text-center py-3 rounded-2xl">
+                    <p class="text-[#3A3E46] font-inter font-normal">Est. Time - 11 Hour</p>
+                  </div>
+                  
+                </div>
+                
+              </div>
+            </div>
+            <!-- left end -->
+            <!-- right start -->
+            <div class="right-greenline-paribahan w-2/12 flex justify-center bg-white rounded-tl-3xl mb-20">
+              <div class="py-32 space-y-2 text-center">
+                <div class="px-5">
+                  <img src="./images/fare.png" alt="">
+                </div>               
+                <h1 class="text-2xl font-raleway font-bold">550 Taka</h1>
+                <p class="text-2xl capitalize">per seat</p>
+              </div>             
+            </div>
+          </div>
+          <!-- greenline-paribahan end --> 
+          <!-- select your seat start -->
+          <div class="flex">
+            <!-- left side start-->
+            <div class="w-8/12 bg-white p-10 border-r-2 border-dashed">
+              <!-- seat desc -->
+              <div class="">
+                <h2 class="capitalize py-3 border-b-2 border-dashed">Select your seat</h2>
+                <div class="flex justify-between p-5 border-b-2 border-dashed">
+                  <div class="flex">
+                    <div class="">
+                      <img src="./images/seat-gray.png" alt="">
+                    </div>                    
+                    <p class="">Available</p>
+                  </div>
+                  <div class="flex">
+                    <div class="">
+                      <img src="./images/seat-green-filled.png" alt="">
+                    </div>
+                    <p class="">Selected</p>
+                  </div>
+                </div>
+              </div>
+              <!-- seat desc end -->
+              <!-- Seat -->
+              <div class="">
+                <div class=""></div>
+                <div class=""></div>
+              </div>
+              <!-- Seat end-->
+            </div>
+            <!-- left side end-->
+            <!-- right side start -->
+            <div class="w-4/12 bg-white p-10">
+              <div class="">
+                <h2 class="">Select your seat</h2>
+                <table class="w-full">
+                  <thead>
+                    <tr>
+                      <th class="">Seat</th>
+                      <th class="">Class</th>
+                      <th class="">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td>C2</td>
+                      <td>Economy</td>
+                      <td>550</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>C2</td>
+                      <td>Economy</td>
+                      <td>550</td>
+                    </tr>
+                  </tbody>
+                              
+                  
+                </table>
+              </div>
+            </div>
+            <!-- right side end -->
+          </div>
+          <!-- select your seat end -->
+        </div>
+        <!-- container end-->
+      </section>
+      <!-- ph paribahan secrion end -->
+    </main>
+    <footer class="bg-black text-white">This is footer</footer>
+</body>
+</html>
