@@ -45,7 +45,7 @@ function updateGrandTotal() {
 
 function applyCoupon() {
     const couponCode = document.getElementById('couponCode').value;
-    if (couponCode === 'couple 20') {
+    if (couponCode === 'Couple 20') {
         discount = Math.floor(totalPrice * 0.2);
         updateGrandTotal();
     } else if (couponCode === 'NEW15'){

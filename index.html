@@ -20,7 +20,7 @@
         theme: {
           extend: {
             colors: {
-              selected: '#da373d',
+              selected: '#1DD100',
             }
           }
         }
@@ -75,30 +75,111 @@
     <main>
 
       <!-- main banner start -->
-      <section>
-        <div class="container mx-auto">
-          <div class="hero min-h-screen" style="background-image: url(./images/banner.png);">
-            <div class="hero-overlay bg-opacity-60"></div>
+      <section class="">
+        <div class="container mx-auto ">
+          <div class="hero" style="background-image: url(./images/banner.png);">
+            <div class="hero-overlay rounded- bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
-              <div class="">
+              <div class="space-y-10 py-44">
                 <h1 class="mb-5 font-raleway text-6xl font-bold ">End-to-End Travel with </h1>
-                <h1 class="mb-5 font-raleway text-6xl font-bold">Digital Paribahan</h1>
+                <h1 class="mb-5 font-raleway text-6xl font-bold text-green-500">Digital Paribahan</h1>
                 <p class="max-w-xl mx-auto mb-5"> We are offering excelent places with flexible budget. You will get awesome experience with us. So, why so late? hurry up. Buy your desire destination ticket.</p>
-                <button class="btn btn-primary bg-green-500 text-black border-0">Buy Tickets</button>
+                <div class="">
+                  <a href="#paribahanSeat">
+                    <button class="btn btn-primary bg-green-500 text-black border-0 transition duration-300 delay-150">Buy Tickets</button>
+                  </a>
+                </div>
+                
               </div>
             </div>
           </div>
+          <div class="-mt-14 z-50">
+            <div class="bg-transparent font-inter flex justify-around">
+              <!-- 1st -->
+              <div class="flex gap-6 bg-white p-10 rounded-3xl border-b-4 border-green-500">
+                <div class="">
+                  <img src="./images/people.png" alt="">
+                </div>              
+                <div class="space-y-1">
+                  <h3 class="text-4xl font-bold">500K+</h3>
+                  <p class="text-lg text-[#9A9BA0]">Registered users</p>
+                </div>
+              </div>
+              <!-- 1st end -->
+              <!-- 2nd -->
+              <div class="flex gap-6 bg-white p-10 rounded-3xl border-b-4 border-green-500">
+                <div class="">
+                  <img src="./images/ticket-cupon.png" alt="">
+                </div>              
+                <div class="space-y-1">
+                  <h3 class="text-4xl font-bold">1.7 lacks</h3>
+                  <p class="text-lg text-[#9A9BA0]">Tickets sold</p>
+                </div>
+              </div>
+              <!-- 2nd end -->
+              <!-- 3rd -->
+              <div class="flex gap-6 bg-white p-10 rounded-3xl border-b-4 border-green-500">
+                <div class="">
+                  <img src="./images/stoppage.png" alt="">
+                </div>              
+                <div class="space-y-1">
+                  <h3 class="text-4xl font-bold">80K+</h3>
+                  <p class="text-lg text-[#9A9BA0]">Rental partners</p>
+                </div>
+              </div>
+              <!-- 3rd end -->
+            </div>
+          </div>
+          
         </div> <!-- container div -->
 
         
       </section>
       <!-- main banner end -->
       <!-- best offer start -->
-      <section>
-        <h1>Best offers for you</h1>
-        <div class="left-best-offer"></div>
-        <div class="right-best-offer"></div>
-        <button>see all offers</button>
+      <section class="my-24">
+        <div class="container mx-auto">
+          <h1 class="text-center font-raleway text-4xl font-bold">Best offers for you</h1>
+          <div class="flex justify-between">
+            <!-- left -->
+            <div class="left-best-offer flex my-14 bg-[#FFBF0F]">
+              <div class="offFifteen p-12 font-inter">
+                <h3 class="font-bold text-5xl">15% OFF</h3>
+                <p class="text-2xl font-bold">on your next purchase</p>
+                <p class="text-2xl">use by March 2024</p>
+              </div>
+              <div class="">
+                <img src="./images/cupon-devider.png" alt="">
+              </div>
+              <div class="newFifteen p-14 font-raleway">
+                <h3 class="font-bold text-5xl mb-3">NEW15</h3>
+                <p class="text-2xl">Coupon Code</p>
+              </div>
+            </div>
+            <!-- left end -->
+            <!-- right -->
+            <div class="right-best-offer flex my-14 bg-[#F78C9C]">
+              <div class="offTwenty p-12 font-inter">
+                <h3 class="font-bold text-5xl">15% OFF</h3>
+                <p class="text-2xl font-bold">on your next purchase</p>
+                <p class="text-2xl">use by April 2024</p>
+              </div>
+              <div class="">
+                <img src="./images/cupon-devider.png" alt="">
+              </div>
+              <div class="coupleTwenty newFifteen p-14 font-raleway">
+                <h3 class="font-bold text-5xl mb-3">Couple 20</h3>
+                <p class="text-2xl">Coupon Code</p>
+              </div>
+            </div>
+            <!-- right end -->
+          </div>
+          <div class="text-center">
+            <button class="text-xl text-[#22C343] capitalize font-raleway font-bold border-2 border-green-600 rounded-2xl p-3 hover:bg-gray-500">see all offers</button>
+          </div>
+          
+        </div>
+        
       </section>
       <!-- best offer end -->
       <!-- ph paribahan start -->
@@ -192,7 +273,7 @@
               </div>
               <!-- seat desc end -->
               <!-- Seat container-->
-              <div class="px-5">
+              <div class="px-5" id="paribahanSeat">
                 <div class="flex justify-end">
                   <p class="bg-[#F7F8F8] py-2 px-10 rounded-xl my-5">
                     <i class="fa-solid fa-dharmachakra"></i>
